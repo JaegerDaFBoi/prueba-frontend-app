@@ -1,0 +1,54 @@
+@use '../../../colors' as *;
+
+.lang-selector {
+    position: relative;
+    cursor: pointer;
+}
+
+.lang-selector_text {
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+}
+
+.lang-selector_dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -85px;
+    padding: 10px 15px;
+    background-color: $white;
+    color: $blue-2;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+    ul {
+        font-size: 16px;
+        margin: 0;
+
+        li {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .arrow {
+        width: 0;
+        height: 0;
+        border-right: 5px solid transparent;
+        border-top: 10px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 15px solid #ffffff;
+        position: absolute;
+        left: 90px;
+        bottom: 84px;
+      }
+}
+
+
+
+.lang-selector:hover {
+    .lang-selector_dropdown {
+        display: block;
+    }
+}
