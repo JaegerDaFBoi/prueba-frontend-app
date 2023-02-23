@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LangSelectorComponent } from './components/lang-selector/lang-selector.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MainContentComponent } from './components/main-content/main-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LangSelectorComponent
+    LangSelectorComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
