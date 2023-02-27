@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { LangSelectorComponent } from './components/lang-selector/lang-selector.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LangSelectorComponent,
-    MainContentComponent
+    MainContentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

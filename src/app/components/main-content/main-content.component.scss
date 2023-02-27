@@ -1,72 +1,177 @@
-@use '../../../colors' as *;
+@use "../../../colors" as *;
 
 .main-content {
-    width: 100%;
-    padding: 7px 20px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 7px 20px;
+  box-sizing: border-box;
 }
 
 .main-content_title {
-    width: 100%;
-    padding: 5px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .main-content_title_text {
-    width: 100%;
-    color: $blue-2;
-    margin: 0;
-    font-size: 20px;
-    line-height: 24px;
-    box-sizing: border-box;
-    position: relative;
+  width: 100%;
+  color: $blue-2;
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .main-content_title_text::after {
-    content: "";
-    border-bottom: 1px solid $gray-3;
-    margin-left: 10px;
-    position: absolute;
-    top: 50%;
-    width: 75%;
+  content: "";
+  border-bottom: 1px solid $gray-3;
+  margin-left: 10px;
+  position: absolute;
+  top: 50%;
+  width: 75%;
 }
 
 .main-content_container {
-    width: 100%;
-    height: auto;
-    padding: 24px 0;
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .main-content_container_offers-grid-row {
-    padding: 0;
-    margin: 0 auto;
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box; 
+  padding: 0;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-items: center;
+  box-sizing: border-box;
 }
 
 .main-content_container_offer {
-    width: 100%;
-    height: 200px;
-    padding: 5px 15px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 233px;
+  min-width: 200px;
+  height: 215px;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  position: relative;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 1px solid $blue-3;
-        border-radius: 16px;
-        box-shadow: 0px 0px 8px 1px $blue-1;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid $blue-3;
+    border-radius: 16px;
+    box-shadow: 0px 0px 8px 1px $blue-1;
+  }
 }
 
+.main-content_container_offer_description {
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  padding: {
+    top: 9px;
+    bottom: 13px;
+    left: 16px;
+    right: 16px;
+  }
+  box-sizing: border-box;
+  top: 58%;
+  left: 1px;
+  background-color: $gray-4;
+  border-radius: 0 0 15px 15px;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.offer_description_text {
+  margin: 0;
+}
+
+.offer_description--uppertext {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.offer_description--price {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 11%;
+}
+
+.main-content_container_menu {
+  width: 100%;
+  height: 330px;
+}
+
+.main-content_container_menu-box {
+  max-width: 233px;
+  min-width: 200px;
+  height: 327px;
+  border-radius: 15px;
+  margin: 10px auto;
+  padding-top: 30px;
+  box-shadow: 2px 2px 8px 2px #00000029;
+  box-sizing: border-box;
+}
+
+.menu-box_title {
+  text-align: center;
+  margin: 0;
+  color: $gray-3;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.menu-box_links-container {
+  width: 100%;
+  margin-top: 16px;
+  text-align: left;
+
+  .no-border {
+    border-bottom: 0px solid;
+  }
+
+  span {
+    display: block;
+    padding: 15.5px 29px;
+    border-bottom: 1px solid rgba($color: #00000029, $alpha: 0.2);
+
+    a {
+      color: $gray-4;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 300;
+      margin-left: 23px;
+    }
+
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 15px solid $blue-2;
+      position: absolute;
+      margin-top: 3px;
+    }
+
+  }
+}
