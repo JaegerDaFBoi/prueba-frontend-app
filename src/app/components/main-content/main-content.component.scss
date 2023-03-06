@@ -30,7 +30,7 @@
   margin-left: 10px;
   position: absolute;
   top: 50%;
-  width: 100%;
+  width: 70vw;
   box-sizing: border-box;
 }
 
@@ -174,5 +174,53 @@
       margin-top: 3px;
     }
 
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .main-content {
+    padding: {
+      top: 56px;
+      left: 63px;
+      right: 63px;
+      bottom: 41px;
+    };
+  }
+
+  .main-content_title_text {
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+
+  .main-content_title_text::after {
+    width: 82.5vw;
+  }
+
+  .main-content_container {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-content_container_offers-grid-row {
+    flex-direction: row;
+    width: 80%;
+  }
+
+  .main-content_container_offer {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+
+  .main-content_container_menu {
+    width: 20%;
+  }
+
+  .main-content_container_menu-box {
+    margin-top: 5px;
+    margin-left: -9%;
+    margin-right: 0;
   }
 }
