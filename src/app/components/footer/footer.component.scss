@@ -50,7 +50,13 @@
 .footer_links_container {
     margin: 0 auto;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
+
+.align-self {
+    align-self: center;
+}
+
 
 .footer_links_text--title {
     color: $red;
@@ -71,4 +77,36 @@
     line-height: 22px;
     font-weight: normal;
     margin-bottom: 12px;
+}
+
+.footer_links_text--about-us-link {
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        padding: 33px 63px;
+    }
+
+    .footer_links {
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .footer_links_container {
+        width: 25%;
+        margin-right: 95px;
+        text-align: left;
+        align-self: center;
+    }
+
+    .footer_links_text--title {
+        margin-bottom: 14px;
+    }
+
+    .footer_links_text--link {
+        margin-bottom: 14px;
+    }
 }
